@@ -22,11 +22,6 @@ const routes = [
     path: '/warehouses',
     name: 'WarehouseList',
     component: () => import('../views/WarehouseList.vue')
-  },
-  {
-    path: '/warehouses/new',
-    name: 'WarehouseForm',
-    component: () => import('../views/WarehouseForm.vue')
   }
 ]
 

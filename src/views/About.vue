@@ -1,5 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>Projeto Warehouse feito em VueJS e Vuetify durante o QSD7</h1>
   </div>
 </template>
+

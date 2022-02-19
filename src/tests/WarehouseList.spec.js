@@ -1,18 +1,23 @@
 import { mount } from '@cypress/vue'
-import WarehouseCard from '@/components/WarehouseCard.vue'
-import WarehouseList from '@/views/WarehouseList.vue'
+import Vue from 'vue'
+import Vuetify from 'vuetify'
+import WarehouseTable from "@/components/WarehouseTable.vue";
+
+Vue.use(Vuetify)
 
 describe('WarehouseList', () => {
+  let vuetify
+  beforeEach(() => {
+      vuetify = new Vuetify()
+  })
+
   it('Lists all warehouses', () => {
         
-    mount(WarehouseList, {
+    mount(WarehouseTable, {
       
     })
-    mount(WarehouseCard, {
-      
-    })
-    
-    cy.contains('h1', 'Galpões Cadastrados').should('be.visible');
-    cy.get('p').should('have.text', 'Código: CEP: ')
+
+    cy.contains('div', 'Lista de Galpões').should('be.visible');
+    cy.get('table').should('have.text', 'NomeCódigoCep')
   })
 })
